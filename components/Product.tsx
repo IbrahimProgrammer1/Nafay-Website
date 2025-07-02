@@ -1,6 +1,7 @@
 // components/Product.jsx
 import React from 'react';
 import Image from 'next/image'; // Import the Next.js Image component
+import { Button } from './ui/button';
 
 // Define a TypeScript interface for the Product object
 interface ProductType {
@@ -177,12 +178,12 @@ const ProductCard = ({ product }: ProductCardProps) => { // Add type annotation 
             ${parseFloat(product.originalPrice).toFixed(2)}
           </p>
         </div>
-        <button
+        <Button
           className="mt-auto w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           aria-label={`Add ${product.name} to cart`}
         >
           Add To Cart
-        </button>
+        </Button>
       </div>
     </article>
   );
